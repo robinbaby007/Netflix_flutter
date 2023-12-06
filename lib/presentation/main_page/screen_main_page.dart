@@ -13,7 +13,6 @@ class ScreenMainPage extends StatelessWidget {
         child: Center(
           child: Text(
             'Main Page',
-            style: TextStyle(color: Colors.white),
           ),
         ),
       ),
