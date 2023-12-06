@@ -5,14 +5,15 @@ class BottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context).copyWith(canvasColor: Colors.black),
-      child: BottomNavigationBar(
-         items: getItems(),
-        onTap: (position) {},
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+    return BottomNavigationBar(
+      items: getItems(),
+      onTap: (position) {},
+      backgroundColor: Colors.black,
+      type: BottomNavigationBarType.fixed,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      selectedItemColor: Colors.white,
+      unselectedItemColor: Colors.grey
     );
   }
 
@@ -28,7 +29,6 @@ class BottomNav extends StatelessWidget {
             AssetImage('assets/icons/play.png'),
           ),
           label: "New & Hot"),
-     
       const BottomNavigationBarItem(
           icon: ImageIcon(
             AssetImage('assets/icons/smile.png'),
