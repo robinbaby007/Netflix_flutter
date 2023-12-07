@@ -13,7 +13,6 @@ class ScreenMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
       body: ValueListenableBuilder(
           valueListenable: navigationIndex,
           builder: (context, index, _) {
