@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FastLaugh extends StatelessWidget {
-  const FastLaugh({super.key});
+class ScreenFastLaugh extends StatelessWidget {
+  const ScreenFastLaugh({super.key});
 
   @override
   Widget build(BuildContext context) {
