@@ -9,7 +9,7 @@ class ScreenDownloads extends StatelessWidget {
     return const Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100),
-        child: WidgetAppBar(),
+        child: WidgetAppBar(title: 'Downloads'),
       ),
       body: SafeArea(
         child: Center(

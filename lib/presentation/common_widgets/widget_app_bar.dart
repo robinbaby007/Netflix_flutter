@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WidgetAppBar extends StatelessWidget {
-  const WidgetAppBar({super.key});
-
+  const WidgetAppBar({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,7 +13,7 @@ class WidgetAppBar extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              "New \$ Hot",
+              title,
               style: TextStyle(
                   fontFamily: GoogleFonts.montserrat().fontFamily,
                   fontSize: 30,
