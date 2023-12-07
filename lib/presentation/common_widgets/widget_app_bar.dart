@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WidgetAppBar extends StatelessWidget {
   const WidgetAppBar({super.key});
@@ -11,7 +12,13 @@ class WidgetAppBar extends StatelessWidget {
         height: 100,
         child: Row(
           children: [
-            const Text("New \$ Hot"),
+            Text(
+              "New \$ Hot",
+              style: TextStyle(
+                  fontFamily: GoogleFonts.montserrat().fontFamily,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold),
+            ),
             const Spacer(),
             const Icon(
               Icons.cast,
