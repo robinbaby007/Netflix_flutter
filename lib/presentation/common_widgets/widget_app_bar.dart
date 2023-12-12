@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:netflix/core/extensions.dart';
 
 class WidgetAppBar extends StatelessWidget {
   const WidgetAppBar({super.key, required this.title});
@@ -12,13 +12,7 @@ class WidgetAppBar extends StatelessWidget {
         height: 100,
         child: Row(
           children: [
-            Text(
-              title,
-              style: TextStyle(
-                  fontFamily: GoogleFonts.montserrat().fontFamily,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
-            ),
+            Extensions.customText(title, 30, true,null),
             const Spacer(),
             const Icon(
               Icons.cast,

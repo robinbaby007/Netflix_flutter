@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:netflix/core/extensions.dart';
 import 'package:netflix/presentation/common_widgets/widget_app_bar.dart';
 
 class ScreenDownloads extends StatelessWidget {
@@ -21,15 +21,17 @@ class ScreenDownloads extends StatelessWidget {
               children: [
                 const Icon(Icons.settings, color: Colors.white),
                 const SizedBox(width: 16),
-                Text(
-                  "Smart Download",
-                  style: TextStyle(
-                      fontFamily: GoogleFonts.montserrat().fontFamily,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold),
-                )
+                Extensions.customText("Smart Download", 10, true,null),
               ],
             ),
+            const SizedBox(height: 14),
+
+            Container(
+              alignment: Alignment.center,
+              child: Extensions.customText("Introducing Downloads for you", 20, true, null),
+            )
+          
+            
           ],
         ),
       )),
