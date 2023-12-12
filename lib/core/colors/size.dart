@@ -1,9 +1,13 @@
-const extraSmallSzie = 4;
+const double extraSmallSzie = 4;
 
-const smallSize = 14;
+const double smallSize = 14;
 
-const mediumSize = 20;
+const double mediumSize = 20;
 
-const largeSize = 30;
+const double largeSize = 45;
 
-const extraLargeSize = 40;
+const double extraLargeSize = 55;
+
+const double xxSize = 70;
+
+const double xxxSize = 100;
