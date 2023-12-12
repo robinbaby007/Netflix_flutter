@@ -13,4 +13,12 @@ class Extensions {
           fontWeight: isBold == true ? FontWeight.w900 : FontWeight.normal),
     );
   }
+
+  static List<String> getMovieBanners() {
+    return [
+      "https://www.themoviedb.org/t/p/original/a4DDU8cSlBI9lUC7w2m93nQq5D6.jpg",
+      "https://www.themoviedb.org/t/p/original/7M7hxeLiTcta74AVasacWQFIFmv.jpg",
+      "https://www.themoviedb.org/t/p/original/pDBn3l3ouE13vIpG0WR81QzwGWz.jpg"
+    ];
+  }
 }

@@ -1,14 +1,19 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/size.dart';
 import 'package:netflix/core/extensions.dart';
 import 'package:netflix/presentation/common_widgets/widget_app_bar.dart';
 import 'package:netflix/presentation/downloads/widget/custom_buttion.dart';
+import 'package:netflix/presentation/downloads/widget/image_card.dart';
 
 class ScreenDownloads extends StatelessWidget {
   const ScreenDownloads({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(100),
@@ -40,14 +45,46 @@ class ScreenDownloads extends StatelessWidget {
                       false,
                       Colors.grey),
                   const SizedBox(height: smallSize),
+
+                  // Container(
+                  //   width: 200,
+                  //   height: 200,
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.grey,
+                  //     borderRadius: BorderRadius.circular(100),
+                  //   ),
+                  // ),
+
                   Container(
-                    width: 200,
-                    height: 200,
+                    alignment: Alignment.center,
+                    width: screenSize.width / 1.4,
+                    height: screenSize.width / 1.4,
                     decoration: BoxDecoration(
                       color: Colors.grey,
-                      borderRadius: BorderRadius.circular(100),
+                      borderRadius: BorderRadius.circular(200),
+                    ),
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        ImageSubCard(
+                          networkImageUrl: Extensions.getMovieBanners()[2],
+                          roationAngle: 20 * pi / 180,
+                          margin: const EdgeInsets.only(left: 140,top: 0),
+                        ),
+                        ImageSubCard(
+                          networkImageUrl: Extensions.getMovieBanners()[1],
+                          roationAngle: -20 * pi / 180,
+                          margin: const EdgeInsets.only(right: 140,top: 0),
+                        ),
+                        ImageMainCard(
+                          networkImageUrl: Extensions.getMovieBanners()[0],
+                          roationAngle: 0,
+                          margin: const EdgeInsets.only(top: 30),
+                        )
+                      ],
                     ),
                   ),
+
                   const SizedBox(height: extraLargeSize),
                   CustomButton(
                     padding: mediumSize,
