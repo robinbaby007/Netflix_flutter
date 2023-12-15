@@ -45,23 +45,13 @@ class ScreenDownloads extends StatelessWidget {
                       false,
                       Colors.grey),
                   const SizedBox(height: smallSize),
-
-                  // Container(
-                  //   width: 200,
-                  //   height: 200,
-                  //   decoration: BoxDecoration(
-                  //     color: Colors.grey,
-                  //     borderRadius: BorderRadius.circular(100),
-                  //   ),
-                  // ),
-
                   Container(
                     alignment: Alignment.center,
                     width: screenSize.width / 1.4,
                     height: screenSize.width / 1.4,
                     decoration: BoxDecoration(
                       color: Colors.grey,
-                      borderRadius: BorderRadius.circular(200),
+                      borderRadius: BorderRadius.circular(1000),
                     ),
                     child: Stack(
                       alignment: Alignment.center,
@@ -69,12 +59,12 @@ class ScreenDownloads extends StatelessWidget {
                         ImageSubCard(
                           networkImageUrl: Extensions.getMovieBanners()[2],
                           roationAngle: 20 * pi / 180,
-                          margin: const EdgeInsets.only(left: 140,top: 0),
+                          margin: const EdgeInsets.only(left: 140, top: 0),
                         ),
                         ImageSubCard(
                           networkImageUrl: Extensions.getMovieBanners()[1],
                           roationAngle: -20 * pi / 180,
-                          margin: const EdgeInsets.only(right: 140,top: 0),
+                          margin: const EdgeInsets.only(right: 140, top: 0),
                         ),
                         ImageMainCard(
                           networkImageUrl: Extensions.getMovieBanners()[0],
@@ -84,7 +74,6 @@ class ScreenDownloads extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   const SizedBox(height: extraLargeSize),
                   CustomButton(
                     padding: mediumSize,
@@ -103,25 +92,6 @@ class ScreenDownloads extends StatelessWidget {
                     textColor: Colors.black,
                     textSize: 17,
                   ),
-
-                  // Padding(
-                  //   padding: const EdgeInsets.only(
-                  //       left: mediumSize, right: mediumSize),
-                  //   child: SizedBox(
-                  //     width: double.infinity,
-                  //     child: ElevatedButton(
-                  //       style: ButtonStyle(
-                  //           backgroundColor:
-                  //               MaterialStateProperty.all(Colors.blue[800]),
-                  //           shape: MaterialStateProperty.all(
-                  //               RoundedRectangleBorder(
-                  //             borderRadius: BorderRadius.circular(5.0),
-                  //           ))),
-                  //       onPressed: () {},
-                  //       child: Extensions.customText("Setup", 22, true, null),
-                  //     ),
-                  //   ),
-                  // )
                 ],
               ),
             ),
