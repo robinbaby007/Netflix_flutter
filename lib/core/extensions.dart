@@ -1,5 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:netflix/presentation/fast_laugh/video_list_item.dart';
 
 class Extensions {
   static Text customText(String text, double size, bool isBold, Color? color) {
@@ -20,5 +21,27 @@ class Extensions {
       "https://www.themoviedb.org/t/p/original/7M7hxeLiTcta74AVasacWQFIFmv.jpg",
       "https://www.themoviedb.org/t/p/original/pDBn3l3ouE13vIpG0WR81QzwGWz.jpg"
     ];
+  }
+
+  static List<Color> getColors() {
+    return [
+      Colors.green,
+      Colors.red,
+      Colors.black,
+      Colors.blue,
+      Colors.yellow,
+      Colors.white,
+      Colors.purple,
+      Colors.pink,
+      Colors.orange,
+    ];
+  }
+
+  static List<Widget> colorListWidget() {
+    List<Widget> allItems = [];
+    getColors().asMap().forEach((index, element) {
+      allItems.add(VideoListItem(index: index));
+    });
+    return allItems;
   }
 }
