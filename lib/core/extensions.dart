@@ -46,18 +46,18 @@ class Extensions {
     ];
   }
 
-  static List<Widget> colorListWidget() {
-    List<Widget> allItems = [];
-    getColors().asMap().forEach((index, element) {
-      allItems.add(VideoListItem(index: index));
-    });
-    return allItems;
-  }
+  // static List<Widget> colorListWidget() {
+  //   List<Widget> allItems = [];
+  //   getColors().asMap().forEach((index, element) {
+  //     allItems.add(VideoListItem(index: index));
+  //   });
+  //   return allItems;
+  // }
 
   static List<Widget> getListWidget() {
     List<Widget> allItems = [];
     getUrls().asMap().forEach((index, element) {
-      allItems.add(VideoListItem(index: index));
+      allItems.add(VideoListItem(index: index,heading: '$index'));
     });
 
     return allItems;

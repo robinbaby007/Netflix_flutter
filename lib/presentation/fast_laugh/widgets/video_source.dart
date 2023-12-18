@@ -12,11 +12,10 @@ class VideoScreen extends StatefulWidget {
 
 class _VideoScreenState extends State<VideoScreen> {
   late VideoPlayerController _controller;
-  double _aspectRatio = 16 / 9;
   @override
   void initState() {
     super.initState();
-     _controller = VideoPlayerController.networkUrl(Uri.parse(widget.url))
+    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.url))
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {
@@ -36,10 +35,10 @@ class _VideoScreenState extends State<VideoScreen> {
     return Center(
       child: _controller.value.isInitialized
           ? AspectRatio(
-              aspectRatio:_aspectRatio,
+              aspectRatio: _controller.value.aspectRatio,
               child: VideoPlayer(_controller),
             )
-          :  const CircularProgressIndicator(),
+          : const CircularProgressIndicator(),
     );
   }
 }
