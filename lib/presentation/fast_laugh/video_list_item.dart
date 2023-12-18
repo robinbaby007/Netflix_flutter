@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix/core/colors/size.dart';
 import 'package:netflix/core/extensions.dart';
-// import 'package:netflix/core/extensions.dart';
-import 'package:netflix/presentation/fast_laugh/widgets/image_icon_with_text.dart';
+ import 'package:netflix/presentation/fast_laugh/widgets/image_icon_with_text.dart';
 import 'package:netflix/presentation/fast_laugh/widgets/video_source.dart';
 
 class VideoListItem extends StatelessWidget {
-  const VideoListItem({super.key, required this.index});
+  const VideoListItem({super.key, required this.index, required this.heading});
   final int index;
+  final String heading;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-         VideoScreen(url: Extensions.getUrls()[index]),
+        VideoScreen(url: Extensions.getUrls()[index]),
         Padding(
           padding: const EdgeInsets.all(8),
           child: Row(
@@ -23,13 +23,13 @@ class VideoListItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Ludo",
+                    heading,
                     style: GoogleFonts.sonsieOne(
                       textStyle: const TextStyle(fontSize: 50),
                     ),
                   ),
-                  Spacer(),
-                  CircleAvatar(
+                  const Spacer(),
+                  const CircleAvatar(
                     backgroundColor: Colors.black87,
                     child: Icon(
                       Icons.volume_off,
@@ -48,27 +48,28 @@ class VideoListItem extends StatelessWidget {
                       borderRadius: BorderRadius.circular(2),
                       color: Colors.black87,
                     ),
-                    child: Text(
+                    child: const Text(
                       "16+",
                       textAlign: TextAlign.center,
                       style:
                           TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Spacer(),
-                  CircleAvatar(
+                  const Spacer(),
+                  const CircleAvatar(
                     radius: 30,
                     backgroundImage: AssetImage("assets/images/laugh_dp.jpeg"),
                   ),
-                  Text("Ludo"),
-                  SizedBox(height: mediumSize),
-                  ImageIconWithText(icon: Icons.emoji_emotions, text: "LOL"),
-                  SizedBox(height: mediumSize),
-                  ImageIconWithText(icon: Icons.add, text: "My List"),
-                  SizedBox(height: mediumSize),
-                  ImageIconWithText(icon: Icons.share, text: "Share"),
-                  SizedBox(height: mediumSize),
-                  ImageIconWithText(
+                  Text(heading),
+                  const SizedBox(height: mediumSize),
+                  const ImageIconWithText(
+                      icon: Icons.emoji_emotions, text: "LOL"),
+                  const SizedBox(height: mediumSize),
+                  const ImageIconWithText(icon: Icons.add, text: "My List"),
+                  const SizedBox(height: mediumSize),
+                  const ImageIconWithText(icon: Icons.share, text: "Share"),
+                  const SizedBox(height: mediumSize),
+                  const ImageIconWithText(
                       icon: Icons.play_arrow_rounded, text: "Play"),
                 ],
               ),

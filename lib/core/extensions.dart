@@ -1,8 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix/presentation/fast_laugh/video_list_item.dart';
-import 'package:netflix/presentation/fast_laugh/widgets/video_source.dart';
-
+ 
 class Extensions {
   static Text customText(String text, double size, bool isBold, Color? color) {
     return Text(
