@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix/core/colors/size.dart';
 import 'package:netflix/core/extensions.dart';
 import 'package:netflix/presentation/fast_laugh/widgets/image_icon_with_text.dart';
@@ -18,12 +19,14 @@ class VideoListItem extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           child: Row(
             children: [
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Ludo",
-                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.sonsieOne(
+                      textStyle: const TextStyle(fontSize: 50),
+                    ),
                   ),
                   Spacer(),
                   CircleAvatar(
@@ -48,7 +51,8 @@ class VideoListItem extends StatelessWidget {
                     child: Text(
                       "16+",
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Spacer(),
@@ -64,7 +68,8 @@ class VideoListItem extends StatelessWidget {
                   SizedBox(height: mediumSize),
                   ImageIconWithText(icon: Icons.share, text: "Share"),
                   SizedBox(height: mediumSize),
-                  ImageIconWithText(icon: Icons.play_arrow_rounded, text: "Play"),
+                  ImageIconWithText(
+                      icon: Icons.play_arrow_rounded, text: "Play"),
                 ],
               ),
             ],
