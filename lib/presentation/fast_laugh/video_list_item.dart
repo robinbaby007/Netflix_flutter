@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix/core/colors/size.dart';
 import 'package:netflix/core/extensions.dart';
+// import 'package:netflix/core/extensions.dart';
 import 'package:netflix/presentation/fast_laugh/widgets/image_icon_with_text.dart';
+import 'package:netflix/presentation/fast_laugh/widgets/video_source.dart';
 
 class VideoListItem extends StatelessWidget {
   const VideoListItem({super.key, required this.index});
@@ -12,9 +14,7 @@ class VideoListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          color: Extensions.getColors()[index],
-        ),
+         VideoScreen(url: Extensions.getUrls()[index]),
         Padding(
           padding: const EdgeInsets.all(8),
           child: Row(

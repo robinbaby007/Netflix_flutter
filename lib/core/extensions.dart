@@ -1,6 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix/presentation/fast_laugh/video_list_item.dart';
+import 'package:netflix/presentation/fast_laugh/widgets/video_source.dart';
 
 class Extensions {
   static Text customText(String text, double size, bool isBold, Color? color) {
@@ -37,11 +38,29 @@ class Extensions {
     ];
   }
 
+  static List<String> getUrls() {
+    return [
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    ];
+  }
+
   static List<Widget> colorListWidget() {
     List<Widget> allItems = [];
     getColors().asMap().forEach((index, element) {
       allItems.add(VideoListItem(index: index));
     });
+    return allItems;
+  }
+
+  static List<Widget> getListWidget() {
+    List<Widget> allItems = [];
+    getUrls().asMap().forEach((index, element) {
+      allItems.add(VideoListItem(index: index));
+    });
+
     return allItems;
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/extensions.dart';
-
+ 
 class ScreenFastLaugh extends StatelessWidget {
   const ScreenFastLaugh({super.key});
 
@@ -11,7 +11,7 @@ class ScreenFastLaugh extends StatelessWidget {
         child: PageView(
           onPageChanged: (value) {},
           scrollDirection: Axis.vertical,
-          children: Extensions.colorListWidget(),
+          children: Extensions.getListWidget(),
         ),
       ),
     );
