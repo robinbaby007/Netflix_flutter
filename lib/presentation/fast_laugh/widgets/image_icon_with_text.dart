@@ -10,8 +10,15 @@ class ImageIconWithText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(icon),
-        Text(text),
+        Icon(
+          icon,
+          color: Colors.white,
+          size: 35,
+        ),
+        Text(
+          text,
+          style: const TextStyle(color: Colors.white),
+        ),
       ],
     );
   }

@@ -14,34 +14,61 @@ class VideoListItem extends StatelessWidget {
         Container(
           color: Extensions.getColors()[index],
         ),
-        const Row(
-          children: [
-            Column(
-              children: [
-                Text("Ludo"),
-                Spacer(),
-                Icon(Icons.volume_off),
-              ],
-            ),
-            Spacer(),
-            Column(
-              children: [
-                Text("16+"),
-                Spacer(),
-                CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/laugh_dp.jpeg")),
-                Text("Ludo"),
-                SizedBox(height: mediumSize),
-                ImageIconWithText(icon: Icons.emoji_emotions, text: "LOL"),
-                SizedBox(height: mediumSize),
-                ImageIconWithText(icon: Icons.add, text: "My List"),
-                SizedBox(height: mediumSize),
-                ImageIconWithText(icon: Icons.share, text: "Share"),
-                SizedBox(height: mediumSize),
-                ImageIconWithText(icon: Icons.play_arrow_rounded, text: "Play"),
-              ],
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.all(8),
+          child: Row(
+            children: [
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Ludo",
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(),
+                  CircleAvatar(
+                    backgroundColor: Colors.black87,
+                    child: Icon(
+                      Icons.volume_off,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  Container(
+                    width: 25,
+                    height: 16,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2),
+                      color: Colors.black87,
+                    ),
+                    child: Text(
+                      "16+",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/images/laugh_dp.jpeg"),
+                  ),
+                  Text("Ludo"),
+                  SizedBox(height: mediumSize),
+                  ImageIconWithText(icon: Icons.emoji_emotions, text: "LOL"),
+                  SizedBox(height: mediumSize),
+                  ImageIconWithText(icon: Icons.add, text: "My List"),
+                  SizedBox(height: mediumSize),
+                  ImageIconWithText(icon: Icons.share, text: "Share"),
+                  SizedBox(height: mediumSize),
+                  ImageIconWithText(icon: Icons.play_arrow_rounded, text: "Play"),
+                ],
+              ),
+            ],
+          ),
         )
       ],
     );
